@@ -3,7 +3,7 @@ require "simplecov"
 SimpleCov.start do
   add_filter "/spec/"
 end
-SimpleCov.coverage_dir "coverage"
+SimpleCov.coverage_dir "spec/_coverage"
 
 # Sinatra App
 ENV["APP_ENV"] = "test"

@@ -1,0 +1,32 @@
+<% @subtitle = "Edit Player" %>
+<%= erb :"common/header" %>
+
+<% if @player.nil? %>
+
+    <p class="error"><strong>Unknown player</strong></p>
+
+<% else %>
+
+    <% unless @player.errors.size.zero? %>
+        <p><strong class="error">Please correct the errors below:</strong></p>
+    <% end %>
+
+    <form method="post">
+        <input type="hidden" name="id" value="<%= @player.id %>" />
+        <%= erb :"common/player_form" %>
+    </form>
+
+    <div class="warning">
+        <p><strong>WARNING! Deleting a record cannot be undone.</strong></p>
+
+        <form method="post" action="/delete">
+            <input type="hidden" name="id" value="<%= @player.id %>" />
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+
+<% end %>
+
+<p class="navigation">Return to <a href="/">Player Search</a>.</p>
+
+<%= erb :"common/footer" %>

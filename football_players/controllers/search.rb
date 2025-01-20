@@ -4,7 +4,7 @@ get "/" do
   @players = if @club_search.empty?
                Player.all
              else
-               Player.where(Sequel.ilike(:first_name, "%#{@club_search}%")).or(Sequel.ilike(:surname, "%#{@club_search}%"))
+               Player.where(Sequel.ilike(:club, "%#{@club_search}%"))
              end
   erb :search
 end

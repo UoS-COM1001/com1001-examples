@@ -85,22 +85,22 @@ RSpec.describe Validation do
     end
   end
 
-  describe "#str_yyy_mm_dd_date?" do
+  describe "#str_yyyy_mm_dd_date?" do
     context "when str is a valid date" do
       it "returns true" do
-        expect(str_yyy_mm_dd_date?("1978-04-25")).to be(true)
-        expect(str_yyy_mm_dd_date?("1978-4-25")).to be(true)
+        expect(str_yyyy_mm_dd_date?("1978-04-25")).to be(true)
+        expect(str_yyyy_mm_dd_date?("1978-4-25")).to be(true)
       end
     end
 
     context "when str is not a valid date" do
       it "returns false" do
-        expect(str_yyy_mm_dd_date?("not a date")).to be(false)
-        expect(str_yyy_mm_dd_date?("78-04-25")).to be(false)
-        expect(str_yyy_mm_dd_date?("2023/04/31")).to be(false)
-        expect(str_yyy_mm_dd_date?("2023 04 25")).to be(false)
-        expect(str_yyy_mm_dd_date?("2023-04-31")).to be(false)
-        expect(str_yyy_mm_dd_date?("2023-04-31-10")).to be(false)
+        expect(str_yyyy_mm_dd_date?("not a date")).to be(false)
+        expect(str_yyyy_mm_dd_date?("78-04-25")).to be(false)
+        expect(str_yyyy_mm_dd_date?("2023/04/31")).to be(false)
+        expect(str_yyyy_mm_dd_date?("2023 04 25")).to be(false)
+        expect(str_yyyy_mm_dd_date?("2023-04-31")).to be(false)
+        expect(str_yyyy_mm_dd_date?("2023-04-31-10")).to be(false)
       end
     end
   end

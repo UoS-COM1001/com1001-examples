@@ -37,7 +37,7 @@ module Validation
     str.start_with?(str, "0") && str_min_length?(str, 10) && str_max_length?(str, 11)
   end
 
-  def str_yyy_mm_dd_date?(str)
+  def str_yyyy_mm_dd_date?(str)
     return false if str.nil?
 
     y, m, d = str.split("-")

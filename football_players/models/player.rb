@@ -2,6 +2,9 @@ require "time_difference"
 
 # A player record from the database
 class Player < Sequel::Model
+  include Validation
+  extend Validation
+
   def name
     "#{first_name} #{surname}"
   end
@@ -15,7 +18,7 @@ class Player < Sequel::Model
   # we'd use "static" in Java, e.g., public static void classMethod(...))
   def self.id_exists?(id)
     return false if id.nil? # check the id is not nil
-    return false unless Validation.str_is_integer?(id) # check the id is an integer
+    return false unless str_integer?(id) # check the id is an integer
     return false if Player[id].nil? # check the database has a record with this id
 
     true # all checks are ok - the id exists
@@ -40,7 +43,7 @@ class Player < Sequel::Model
     errors.add("country", "cannot be empty") if !country || country.empty?
     errors.add("position", "cannot be empty") if !position || position.empty?
     errors.add("date_of_birth", "cannot be empty") if !date_of_birth || date_of_birth.empty?
-    return unless date_of_birth && !Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
+    return unless date_of_birth && !str_yyyy_mm_dd_date?(date_of_birth)
 
     errors.add("date_of_birth", "is invalid")
   end

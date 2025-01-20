@@ -1,15 +1,16 @@
 require "logger"
 require "sequel"
 
-# What mode are we in? (development or testing)
-mode = ENV.fetch("APP_ENV", "development")
+# Start to build the path to the database/log file
+path = "#{__dir__}/db"
+path += "_test" if ENV["APP_ENV"] == "test"
 
 # Instantiate a logger for the database
-logger_file_path = "#{__dir__}/_#{mode}.log"
+logger_file_path = path + ".log"
 logger = Logger.new(logger_file_path)
 
 # Initialise the database
-db_file_path = "#{__dir__}/#{mode}.sqlite3"
+db_file_path = path + ".sqlite3"
 if File.exist?(db_file_path)
   logger.info("Database file found and loaded ('#{db_file_path}')")
   DB = Sequel.sqlite(db_file_path, logger: logger)

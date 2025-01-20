@@ -23,21 +23,13 @@ RSpec.configure do |config|
 
   # before each test is run, delete all records in the Player table
   config.before do
-    Player.dataset.delete
+    spec_before
   end
 end
 
-# Helper function for testing
-def add_test_player_to_db(first_name = "George", surname = "Test", gender = "M", club = "Mantester Utd",
-                          country = "Northern RSpec", position = "Midfield", date_of_birth = "1946-05-22")
-  player = Player.new
-  player.first_name = first_name
-  player.surname = surname
-  player.gender = gender
-  player.club = club
-  player.country = country
-  player.position = position
-  player.date_of_birth = date_of_birth
-  player.save_changes
-  player
+# This is to be overridden if needed in spec/spec_functions,
+# providing a blank default implementation to prevent a runtime error.
+def spec_before
 end
+
+require_if_exist("spec/spec_functions")

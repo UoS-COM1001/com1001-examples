@@ -9,6 +9,6 @@ helpers do
   # This is so that we include useful validation methods
   include Validation
 
-  # Add your modules here that you "required" above, e.g.:
-  # include YourHelperModule
+  # Add your own helper modules to this file
+  require_if_exist "helpers/local_helpers"
 end

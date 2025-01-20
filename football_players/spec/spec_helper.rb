@@ -3,7 +3,7 @@ require "simplecov"
 SimpleCov.start do
   add_filter "/spec/"
 end
-SimpleCov.coverage_dir "spec/_coverage"
+SimpleCov.coverage_dir "#{__dir__}/_coverage"
 
 # Sinatra App
 ENV["APP_ENV"] = "test"
@@ -29,7 +29,6 @@ end
 
 # This is to be overridden if needed in spec/spec_functions,
 # providing a blank default implementation to prevent a runtime error.
-def spec_before
-end
+def spec_before; end
 
 require_if_exist("spec/spec_functions")

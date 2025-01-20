@@ -14,7 +14,7 @@ def require_if_exist(file_path)
 end
 
 # Require application files and directories
-require_if_exist("controllers")
-require_if_exist("helpers/helpers")
-require_if_exist("db/db")
-require_if_exist("models")
+require_if_exist "controllers"
+require_if_exist "helpers/helpers"
+require_if_exist "db/db"
+require_if_exist "models"

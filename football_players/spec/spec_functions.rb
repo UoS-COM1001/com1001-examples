@@ -3,7 +3,7 @@ def spec_before
 end
 
 def add_test_player_to_db(first_name = "George", surname = "Test", gender = "M", club = "Mantester Utd",
-    country = "Northern RSpec", position = "Midfield", date_of_birth = "1946-05-22")
+                          country = "Northern RSpec", position = "Midfield", date_of_birth = "1946-05-22")
   player = Player.new
   player.first_name = first_name
   player.surname = surname

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Form Submission Example</title>
+    <link rel="stylesheet" href="style/style.css">    
+  </head>
+  <body>
+  <% if !@form_was_submitted || @submission_error %> 
+    <h1>Please enter your personal information:</h1>
+  <% end %>
+  <% if @form_was_submitted %>
+    <% if @submission_error %>
+      <p><strong class="error">Please correct the errors below</strong></p>
+    <% else %>
+      <h1 class="success">Success, thanks for your submission!</h1>        
+      <p><strong>First name:</strong> <%= h @first_name %>
+      <p><strong>Surname:</strong> <%= h @surname %>
+      <p><strong>Age:</strong> <%= h @age %>
+      <p><strong>Email address:</strong> <%= h @email_address %>
+    <% end %>
+  <% end %>
+  <% if !@form_was_submitted || @submission_error %> 
+  <form>
+    <p>
+      First name: <input type="text" name="first_name" value="<%= h @first_name %>" />
+      <% if !@first_name_error.nil? %>
+        <br /><strong class="error"><%= @first_name_error %></strong>
+      <% end %>
+    </p>
+    <p>
+      Surname: <input type="text" name="surname" value="<%= h @surname %>" />
+      <% if !@surname_error.nil? %>
+        <br /><strong class="error"><%= @surname_error %></strong>
+      <% end %>
+    </p>
+    <p>
+      Age: <input type="text" name="age" value="<%= h @age %>" />
+      <% if !@age_error.nil? %>
+        <br /><strong class="error"><%= @age_error %></strong>
+      <% end %>
+    </p>
+    <p>
+      Email address: <input type="text" name="email_address" value="<%= h @email_address %>" />
+      <% if !@email_address_error.nil? %>
+        <br /><strong class="error"><%= @email_address_error %></strong>
+      <% end %>
+    </p>      
+    <p><input type="submit" value="Submit"></p>
+  </form>
+  <% end %>
+  </body>
+</html>

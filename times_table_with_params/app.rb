@@ -18,3 +18,6 @@ require_if_exist "controllers"
 require_if_exist "helpers/helpers"
 require_if_exist "db/db"
 require_if_exist "models"
+
+# Sessions
+enable :sessions

@@ -1,0 +1,22 @@
+<% title = "#{@multiplicand} times table" %>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <% if @params_valid %>
+    <h1><%= title %></h1>
+    <ul>
+    <% (1..@limit).each do |i| %>
+      <% result = i * @multiplicand %>
+      <li>
+        <%= i %> times <%= @multiplicand %> = <%= result %>
+      </li>
+    <% end %>
+    </ul>
+  <% else %>
+    Invalid parameters in querystring. Please supply "m" (multiplicand)
+    and "l" (limit) parameters, e.g. ?m=8&l=10
+  <% end %>
+</body>
+</html>

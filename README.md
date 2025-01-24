@@ -1,4 +1,4 @@
-#COM1001 Examples Repository
+# COM1001 Examples Repository
 
 This repository contains Ruby/Sinatra examples from the Spring Semester of the COM1001 module at the University of Sheffield.
 

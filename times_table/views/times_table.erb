@@ -1,0 +1,17 @@
+<% title = "#{@multiplicand} times table" %>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <ul>
+  <% (1..@limit).each do |i| %>
+    <% result = i * @multiplicand %>    
+    <li>
+      <%= i %> times <%= @multiplicand %> = <%= result %>
+    </li>
+  <% end %>
+  </ul>
+</body>
+</html>

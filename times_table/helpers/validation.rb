@@ -6,7 +6,7 @@ module Validation
     str.match?(/\A\S+@\S+\Z/)
   end
 
-  def str_integer?(str)
+  def str_digits?(str)
     return false if str.nil?
 
     str.match?(/^(\d)+$/)

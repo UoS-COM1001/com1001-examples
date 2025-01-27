@@ -13,7 +13,7 @@ get "/" do
     # add validation messages
     @first_name_error = "Please enter your first name" if @first_name.empty?
     @surname_error = "Please enter your surname" if @surname.empty?
-    @age_error = "Please enter your age" unless str_integer?(@age)
+    @age_error = "Please enter your age" unless str_digits?(@age)
     @email_address_error = "Please enter a valid email address" unless str_email_address?(@email_address)
 
     unless @first_name_error.nil? && @surname_error.nil? && @age_error.nil? && @email_address_error.nil?

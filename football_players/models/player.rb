@@ -18,7 +18,7 @@ class Player < Sequel::Model
   # we'd use "static" in Java, e.g., public static void classMethod(...))
   def self.id_exists?(id)
     return false if id.nil? # check the id is not nil
-    return false unless str_integer?(id) # check the id is an integer
+    return false unless str_digits?(id) # check the id is an integer
     return false if Player[id].nil? # check the database has a record with this id
 
     true # all checks are ok - the id exists

@@ -10,21 +10,21 @@ RSpec.describe Validation do
 
     context "when str is not an email address" do
       it "returns false" do
-        expect(str_integer?("not an email address")).to be(false)
+        expect(str_digits?("not an email address")).to be(false)
       end
     end
   end
 
-  describe "#str_integer?" do
+  describe "#str_digits?" do
     context "when str is an integer" do
       it "returns true" do
-        expect(str_integer?("10")).to be(true)
+        expect(str_digits?("10")).to be(true)
       end
     end
 
     context "when str is a str" do
       it "returns false" do
-        expect(str_integer?("not a number")).to be(false)
+        expect(str_digits?("not a number")).to be(false)
       end
     end
   end

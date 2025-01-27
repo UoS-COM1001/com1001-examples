@@ -1,0 +1,134 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/phil/workspace/com1001/codio-setup/empty_app/app.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          6,
+          null,
+          6,
+          2,
+          4,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "/Users/phil/workspace/com1001/codio-setup/empty_app/controllers/main.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/phil/workspace/com1001/codio-setup/empty_app/helpers/helpers.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/phil/workspace/com1001/codio-setup/empty_app/helpers/validation.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          3,
+          null,
+          3,
+          null,
+          null,
+          1,
+          10,
+          null,
+          10,
+          null,
+          null,
+          1,
+          4,
+          null,
+          4,
+          null,
+          null,
+          1,
+          3,
+          null,
+          3,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          2,
+          null,
+          null,
+          1,
+          8,
+          null,
+          8,
+          null,
+          8,
+          null,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/phil/workspace/com1001/codio-setup/empty_app/db/db.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1737372151
+  }
+}

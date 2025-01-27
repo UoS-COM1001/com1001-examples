@@ -16,7 +16,7 @@ RSpec.describe Validation do
   end
 
   describe "#str_digits?" do
-    context "when str is an integer" do
+    context "when str contains digits only" do
       it "returns true" do
         expect(str_digits?("10")).to be(true)
       end

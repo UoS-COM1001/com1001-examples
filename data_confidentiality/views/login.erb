@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log in</title>
+</head>
+<body>
+  <h1>Log in</h1>
+  <p>Please enter your username and password.</p>
+  <form action="/login" method="post">
+    <% unless @error.nil? %>
+      <p style="color:red"><%= @error %></p>
+    <% end %>
+    <p>Username: <br /><input type="text" name="username"/></p>
+    <p>Password: <br /><input type="password" name="password"/></p>
+    <p><input type="submit" value="Submit"/></p>
+  </form>
+</body>
+</html>

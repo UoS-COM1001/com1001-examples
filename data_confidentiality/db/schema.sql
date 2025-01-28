@@ -1,2 +1,6 @@
--- Add your database schema into this file 
--- (see README.md for further instructions)
+CREATE TABLE customers (
+  username TEXT PRIMARY KEY,
+  iv BLOB,
+  salt BLOB,
+  data_crypt BLOB
+);

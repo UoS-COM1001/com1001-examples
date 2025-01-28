@@ -1,2 +1,10 @@
--- Add your database schema into this file 
--- (see README.md for further instructions)
+CREATE TABLE players (
+    id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    surname TEXT,
+    gender TEXT,
+    date_of_birth TEXT,
+    country TEXT,
+    position TEXT,
+    club TEXT
+);

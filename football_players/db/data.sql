@@ -1,0 +1,12 @@
+INSERT INTO players VALUES(1,'Dominic','Calvert-Lewin','M','1997-03-16','England','Forward','Everton');
+INSERT INTO players VALUES(2,'Mary','Earps','F','1993-03-07','England','Goalkeeper','Manchester United');
+INSERT INTO players VALUES(3,'Harry','Kane','M','1993-07-28','England','Forward','Bayern Munich');
+INSERT INTO players VALUES(4,'Ashley','Lawrence','F','1995-06-11','Canada','Midfielder','Chelsea');
+INSERT INTO players VALUES(5,'Son','Heung-min','M','1992-07-08','South Korea','Forward','Tottenham Hotspur');
+INSERT INTO players VALUES(6,'Carpenter','Ellie','F','2000-04-28','Austrailia','Defender','Lyon');
+INSERT INTO players VALUES(7,'Bruno','Fernandes','M','1994-09-08','Portugal','Midfielder','Manchester United');
+INSERT INTO players VALUES(8,'Sam','Kerr','F','1993-09-10','Austrailia','Midfielder','Chelsea');
+INSERT INTO players VALUES(9,'Kevin','De Bruyne','M','1991-06-28','Belgium','Midfielder','Manchester City');
+INSERT INTO players VALUES(10,'Alexia','Putellas','F','1994-02-04','Spain','Midfielder','Barcelona');
+INSERT INTO players VALUES(11,'Jarrad','Branthwaite','M','2002-06-27','England','Defender','Everton');
+INSERT INTO players VALUES(12,'Lauren','James','F','2001-09-29','England','Forward','Chelsea');

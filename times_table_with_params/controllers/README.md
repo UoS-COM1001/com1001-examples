@@ -1,8 +1,10 @@
 # `Controllers` directory
 
-This is the directory where your controller files should live. There is
-currently one file, called `main.rb` with a default route (`get /`). You can
-rename this file and change the operation of the route. You can also add more
-controller files by creating logical groupings of different routes, resulting in
-smaller, more maintainable code files. For example, different controllers for
-the user-facing part of your system and the administration part.
+This is the directory where your controller files should live.
+
+Your application should have at least one controller file, but in order to ease
+maintenance of your application you may choose to have several controller files,
+with each having a different logical grouping of routes.
+
+For example, you could have different controller files for different stories or
+functions of your application.

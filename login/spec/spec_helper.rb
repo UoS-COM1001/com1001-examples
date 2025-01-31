@@ -1,7 +1,13 @@
 # SimpleCov
 require "simplecov"
 SimpleCov.start do
+  # don't track coverage of tests!
   add_filter "/spec/"
+
+  # don't track core application files
+  add_filter "/app.rb"
+  add_filter "/db/db.rb"
+  add_filter "/helpers/helpers.rb"
 end
 SimpleCov.coverage_dir "#{__dir__}/_coverage"
 
